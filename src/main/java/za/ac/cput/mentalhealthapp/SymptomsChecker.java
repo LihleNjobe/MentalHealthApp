@@ -46,7 +46,7 @@ public class SymptomsChecker extends JFrame implements ActionListener {
 
 
 
-    private JButton btnSubmit;
+    private JButton btnSubmit,btnClear, btnExit;
     private Font ft1, ft2, ft3;
 
     public SymptomsChecker() {
@@ -86,6 +86,8 @@ public class SymptomsChecker extends JFrame implements ActionListener {
 
 
         btnSubmit = new JButton("Submit");
+        btnClear = new JButton("Clear");
+        btnExit = new JButton("Exit");
 
         ft1 = new Font("Arial", Font.BOLD, 32);
         ft2 = new Font("Arial", Font.PLAIN, 20);
@@ -196,7 +198,11 @@ public class SymptomsChecker extends JFrame implements ActionListener {
         panelCenter.add(panelRB1);
 
         btnSubmit.setFont(ft3);
+        btnClear.setFont(ft3);
+        btnExit.setFont(ft3);
         panelSouth.add(btnSubmit);
+        panelSouth.add(btnClear);
+        panelSouth.add(btnExit);
 
         this.add(panelNorth, BorderLayout.NORTH);
         this.add(panelCenter, BorderLayout.CENTER);
