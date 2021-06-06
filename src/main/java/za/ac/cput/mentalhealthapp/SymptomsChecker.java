@@ -96,9 +96,9 @@ public class SymptomsChecker extends JFrame implements ActionListener {
     }
     public void setGUI() {
         panelNorth.setLayout(new FlowLayout());
-        panelCenter.setLayout(new GridLayout(8, 1));
-        panelRB1.setLayout(new GridLayout(1, 3));
-        panelRB2.setLayout(new GridLayout(8, 2));
+        panelCenter.setLayout(new GridLayout(8, 2));
+        panelRB1.setLayout(new GridLayout(1, 2));
+        panelRB2.setLayout(new GridLayout(1, 2));
         panelSouth.setLayout(new GridLayout(1, 3));
 
         panelNorth.add(lblHeading);
@@ -112,7 +112,7 @@ public class SymptomsChecker extends JFrame implements ActionListener {
         lblFatigue.setForeground(Color.white);
         lblFatigue.setHorizontalAlignment(JLabel.LEFT);
         radFatigueYes.setFont(ft2);
-        radFatigueYes.setHorizontalAlignment(JRadioButton.RIGHT);
+        radFatigueYes.setHorizontalAlignment(JRadioButton.CENTER);
         radFatigueYes.setBackground(Color.blue);
 
         panelCenter.add(lblFatigue);
@@ -225,6 +225,12 @@ public class SymptomsChecker extends JFrame implements ActionListener {
     }
     public void actionPerformed(ActionEvent e) {
 
+           if (e.getActionCommand().equals("Clear")) {
+            resetForm();
+        }
+        else if (e.getActionCommand().equals("Exit")) {
+            System.exit(0);
+        }
     }
 
     public static void main(String[] args) {
