@@ -124,6 +124,34 @@ public class SymptomsChecker extends JFrame implements ActionListener {
         radHeavySweating.setHorizontalAlignment(JRadioButton.CENTER);
         radHeavySweating.setBackground(new Color(36, 145, 255));
 
+        panelCenter.add(lblFatigue);
+        panelCenter.add(lblAppetite);
+        panelCenter.add(lblInterest);
+        panelCenter.add(lblAnger);
+        panelCenter.add(lblNervous);
+        panelCenter.add(lblPanic);
+        panelCenter.add(lblHeartRate);
+        panelCenter.add(lblHeavySweating);
+        panelRB1.add(radFatigue);
+        panelRB1.add(radAppetite);
+        panelRB1.add(radInterest);
+        panelRB1.add(radAnger);
+        panelRB1.add(radNervous);
+        panelRB1.add(radPanic);
+        panelRB1.add(radHeartRate);
+        panelRB1.add(radHeavySweating);
+        panelCenter.add(panelRB1);
+        btnSubmit.setFont(ft3);
+
+        this.add(panelNorth, BorderLayout.NORTH);
+        this.add(panelCenter, BorderLayout.CENTER);
+        this.add(panelSouth, BorderLayout.SOUTH);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        btnSubmit.addActionListener(this);
+        this.setSize(360, 600);
+        this.pack();
+        this.setVisible(true);
 
     }
 
