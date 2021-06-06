@@ -15,25 +15,42 @@ public class SymptomsChecker extends JFrame implements ActionListener {
     private JPanel panelNorth;
     private JPanel panelCenter, panelRB1, panelRB2;
     private JPanel panelSouth;
+
     private JLabel lblHeading;
+
+
+    private JLabel lblFatigue;
+    private JRadioButton radFatigueYes;
+    private JRadioButton radFatigueNo;
+    private ButtonGroup fatigueGroup;
+
+    private JLabel lblAppetite;
+    private JRadioButton radAppetiteYes;
+    private JRadioButton radAppetiteNo;
+    private ButtonGroup appetiteGroup;
+
+    private JLabel lblInterest;
+    private JRadioButton radInterestYes;
+    private JRadioButton radInterestNo;
+    private ButtonGroup interestGroup;
+
+    private JLabel lblAnger;
+    private JRadioButton radAngerYes;
+    private JRadioButton radAngerNo;
+    private ButtonGroup angerGroup;
+
+    private JLabel lblNervous;
+    private JRadioButton radNervousYes;
+    private JRadioButton radNervousNo;
+    private ButtonGroup nervousGroup;
+
+    private JLabel lblDanger;
+    private JRadioButton radDangerYes;
+    private JRadioButton radDangerNo;
+    private ButtonGroup dangerGroup;
+
     private JButton btnSubmit;
     private Font ft1, ft2, ft3;
-    private JLabel lblFatigue;
-    private JRadioButton radFatigue;
-    private JLabel lblAppetite;
-    private JRadioButton radAppetite;
-    private JLabel lblInterest;
-    private JRadioButton radInterest;
-    private JLabel lblAnger;
-    private JRadioButton radAnger;
-    private JLabel lblNervous;
-    private JRadioButton radNervous;
-    private JLabel lblPanic;
-    private JRadioButton radPanic;
-    private JLabel lblHeartRate;
-    private JRadioButton radHeartRate;
-    private JLabel lblHeavySweating;
-    private JRadioButton radHeavySweating;
 
     public SymptomsChecker() {
         panelNorth = new JPanel();
@@ -41,107 +58,177 @@ public class SymptomsChecker extends JFrame implements ActionListener {
         panelRB1 = new JPanel();
         panelRB2 = new JPanel();
         panelSouth = new JPanel();
-        lblHeading = new JLabel("Symptoms Checker");
 
-        lblFatigue = new JLabel(" Do you have increased fatigue and sleeping patterns ");
-        radFatigue = new JRadioButton();
-        lblAppetite = new JLabel(" Appetite lose or weight changes ");
-        radAppetite = new JRadioButton();
-        lblInterest = new JLabel(" Loss of interest ");
-        radInterest = new JRadioButton();
-        lblAnger = new JLabel(" Do you have anger or irritability issues ");
-        radAnger = new JRadioButton();
-        lblNervous = new JLabel(" Do you randomly get nervous or restless ");
-        radNervous = new JRadioButton();
-        lblPanic = new JLabel(" Do you get a feeling of danger and panic ");
-        radPanic = new JRadioButton();
-        lblHeartRate = new JLabel(" Rapid or increased heart rate ");
-        radHeartRate = new JRadioButton();
-        lblHeavySweating = new JLabel(" Increased or heavy sweating ");
-        radHeavySweating = new JRadioButton();
+        lblHeading = new JLabel(" Symptoms Checker ");
+
+        lblFatigue = new JLabel("Increased fatigue and sleeping problem: ");
+        radFatigueYes = new JRadioButton("Yes");
+        radFatigueNo = new JRadioButton("No");
+        fatigueGroup = new ButtonGroup();
+
+        lblAppetite = new JLabel("Do you have any appetite or weight changes: ");
+        radAppetiteYes = new JRadioButton("Yes");
+        radAppetiteNo = new JRadioButton("No");
+        appetiteGroup = new ButtonGroup();
+
+        lblInterest = new JLabel(" Lost of interest ");
+        radInterestYes = new JRadioButton("Yes");
+        radInterestNo = new JRadioButton("No");
+        interestGroup = new ButtonGroup();
+
+        lblAnger = new JLabel(" do you have anger or irritability " );
+        radAngerYes = new JRadioButton("Yes");
+        radAngerNo = new JRadioButton("No");
+        angerGroup = new ButtonGroup();
+
+        lblNervous = new JLabel(" do do you get restless or nervous " );
+        radNervousYes = new JRadioButton("Yes");
+        radNervousNo = new JRadioButton("No");
+        nervousGroup = new ButtonGroup();
+
+        lblDanger = new JLabel(" do you randomly feel in danger and panic " );
+        radDangerYes = new JRadioButton("Yes");
+        radDangerNo = new JRadioButton("No");
+        dangerGroup = new ButtonGroup();
 
         btnSubmit = new JButton("Submit");
+
         ft1 = new Font("Arial", Font.BOLD, 32);
         ft2 = new Font("Arial", Font.PLAIN, 22);
         ft3 = new Font("Arial", Font.PLAIN, 24);
 
-}
+    }
     public void setGUI() {
         panelNorth.setLayout(new FlowLayout());
         panelCenter.setLayout(new GridLayout(5, 2));
         panelRB1.setLayout(new GridLayout(1, 2));
         panelRB2.setLayout(new GridLayout(1, 2));
         panelSouth.setLayout(new GridLayout(1, 3));
+
         panelNorth.add(lblHeading);
         lblHeading.setFont(ft1);
         lblHeading.setForeground(Color.white);
+        panelNorth.setBackground(Color.blue);
+        panelCenter.setBackground(Color.blue);
+
 
         lblFatigue.setFont(ft2);
-        lblFatigue.setHorizontalAlignment(JLabel.RIGHT);
-        radFatigue.setFont(ft2);
-        radFatigue.setHorizontalAlignment(JRadioButton.CENTER);
-        radFatigue.setBackground(new Color(36, 145, 255));
+        lblFatigue.setForeground(Color.white);
+        lblFatigue.setHorizontalAlignment(JLabel.LEFT);
+        radFatigueYes.setFont(ft2);
+        radFatigueYes.setHorizontalAlignment(JRadioButton.RIGHT);
+        radFatigueYes.setBackground(Color.blue);
+        radFatigueNo.setFont(ft2);
+        radFatigueNo.setHorizontalAlignment(JRadioButton.RIGHT);
+        radFatigueNo.setBackground(Color.blue);
+        radFatigueNo.setSelected(true);
 
-        lblAppetite.setFont(ft2);
-        lblAppetite.setHorizontalAlignment(JLabel.RIGHT);
-        radAppetite.setFont(ft2);
-        radAppetite.setHorizontalAlignment(JRadioButton.CENTER);
-        radAppetite.setBackground(new Color(36, 145, 255));
-
-        lblInterest.setFont(ft2);
-        lblInterest.setHorizontalAlignment(JLabel.RIGHT);
-        radInterest.setFont(ft2);
-        radInterest.setHorizontalAlignment(JRadioButton.CENTER);
-        radInterest.setBackground(new Color(36, 145, 255));
-
-        lblAnger.setFont(ft2);
-        lblAnger.setHorizontalAlignment(JLabel.RIGHT);
-        radAnger.setFont(ft2);
-        radAnger.setHorizontalAlignment(JRadioButton.CENTER);
-        radAnger.setBackground(new Color(36, 145, 255));
-
-        lblNervous.setFont(ft2);
-        lblNervous.setHorizontalAlignment(JLabel.RIGHT);
-        radNervous.setFont(ft2);
-        radNervous.setHorizontalAlignment(JRadioButton.CENTER);
-        radNervous.setBackground(new Color(36, 145, 255));
-
-        lblPanic.setFont(ft2);
-        lblPanic.setHorizontalAlignment(JLabel.RIGHT);
-        radPanic.setFont(ft2);
-        radPanic.setHorizontalAlignment(JRadioButton.CENTER);
-        radPanic.setBackground(new Color(36, 145, 255));
-
-        lblHeartRate.setFont(ft2);
-        lblHeartRate.setHorizontalAlignment(JLabel.RIGHT);
-        radHeartRate.setFont(ft2);
-        radHeartRate.setHorizontalAlignment(JRadioButton.CENTER);
-        radHeartRate.setBackground(new Color(36, 145, 255));
-
-        lblHeavySweating.setFont(ft2);
-        lblHeavySweating.setHorizontalAlignment(JLabel.RIGHT);
-        radHeavySweating.setFont(ft2);
-        radHeavySweating.setHorizontalAlignment(JRadioButton.CENTER);
-        radHeavySweating.setBackground(new Color(36, 145, 255));
+        fatigueGroup.add(radFatigueYes);
+        fatigueGroup.add(radFatigueNo);
 
         panelCenter.add(lblFatigue);
-        panelCenter.add(lblAppetite);
-        panelCenter.add(lblInterest);
-        panelCenter.add(lblAnger);
-        panelCenter.add(lblNervous);
-        panelCenter.add(lblPanic);
-        panelCenter.add(lblHeartRate);
-        panelCenter.add(lblHeavySweating);
-        panelRB1.add(radFatigue);
-        panelRB1.add(radAppetite);
-        panelRB1.add(radInterest);
-        panelRB1.add(radAnger);
-        panelRB1.add(radNervous);
-        panelRB1.add(radPanic);
-        panelRB1.add(radHeartRate);
-        panelRB1.add(radHeavySweating);
+        panelRB1.add(radFatigueYes);
+        panelRB1.add(radFatigueNo);
         panelCenter.add(panelRB1);
+        lblAppetite.setFont(ft2);
+        lblAppetite.setForeground(Color.white);
+        lblAppetite.setHorizontalAlignment(JLabel.LEFT);
+        radAppetiteYes.setFont(ft2);
+        radAppetiteYes.setHorizontalAlignment(JRadioButton.RIGHT);
+        radAppetiteYes.setBackground(Color.BLUE);
+        radAppetiteNo.setFont(ft2);
+        radAppetiteNo.setHorizontalAlignment(JRadioButton.RIGHT);
+        radAppetiteNo.setBackground(Color.blue);
+        radAppetiteNo.setSelected(true);
+
+        appetiteGroup.add(radFatigueYes);
+        appetiteGroup.add(radFatigueNo);
+
+        panelCenter.add(lblAppetite);
+        panelRB1.add(radAppetiteYes);
+        panelRB1.add(radAppetiteNo);
+        panelCenter.add(panelRB1);
+
+        lblInterest.setFont(ft2);
+        lblInterest.setForeground(Color.white);
+        lblInterest.setHorizontalAlignment(JLabel.LEFT);
+        radInterestYes.setFont(ft2);
+        radInterestYes.setHorizontalAlignment(JRadioButton.RIGHT);
+        radInterestYes.setBackground(Color.blue);
+        radInterestNo.setFont(ft2);
+        radInterestNo.setHorizontalAlignment(JRadioButton.RIGHT);
+        radInterestNo.setBackground(Color.blue);
+        radInterestNo.setSelected(true);
+
+        interestGroup.add(radFatigueYes);
+        interestGroup.add(radFatigueNo);
+
+        panelCenter.add(lblInterest);
+        panelRB1.add(radInterestYes);
+        panelRB1.add(radInterestNo);
+        panelCenter.add(panelRB1);
+
+        lblAnger.setFont(ft2);
+        lblAnger.setForeground(Color.white);
+        lblAnger.setHorizontalAlignment(JLabel.LEFT);
+        radAngerYes.setFont(ft2);
+        radAngerYes.setHorizontalAlignment(JRadioButton.RIGHT);
+        radAngerYes.setBackground(Color.blue);
+        radAngerNo.setFont(ft2);
+        radAngerNo.setHorizontalAlignment(JRadioButton.RIGHT);
+        radAngerNo.setBackground(Color.blue);
+        radAngerNo.setSelected(true);
+
+        angerGroup.add(radFatigueYes);
+        angerGroup.add(radFatigueNo);
+
+        panelCenter.add(lblAnger);
+        panelRB1.add(radAngerYes);
+        panelRB1.add(radAngerNo);
+        panelCenter.add(panelRB1);
+
+        lblNervous.setFont(ft2);
+        lblNervous.setForeground(Color.white);
+        lblNervous.setHorizontalAlignment(JLabel.LEFT);
+        radNervousYes.setFont(ft2);
+        radNervousYes.setHorizontalAlignment(JRadioButton.RIGHT);
+        radNervousYes.setBackground(Color.blue);
+        radNervousNo.setFont(ft2);
+        radNervousNo.setHorizontalAlignment(JRadioButton.RIGHT);
+        radNervousNo.setBackground(Color.blue);
+        radNervousNo.setSelected(true);
+
+        nervousGroup.add(radFatigueYes);
+        nervousGroup.add(radFatigueNo);
+
+        panelCenter.add(lblNervous);
+        panelRB1.add(radNervousYes);
+        panelRB1.add(radNervousNo);
+        panelCenter.add(panelRB1);
+
+        lblDanger.setFont(ft2);
+        lblDanger.setForeground(Color.white);
+        lblDanger.setHorizontalAlignment(JLabel.LEFT);
+        radDangerYes.setFont(ft2);
+        radDangerYes.setHorizontalAlignment(JRadioButton.RIGHT);
+        radDangerYes.setBackground(Color.blue);
+        radDangerNo.setFont(ft2);
+        radDangerNo.setHorizontalAlignment(JRadioButton.RIGHT);
+        radDangerNo.setBackground(Color.blue);
+        radDangerNo.setSelected(true);
+
+        dangerGroup.add(radDangerYes);
+        dangerGroup.add(radDangerNo);
+
+        panelCenter.add(lblDanger);
+        panelRB1.add(radDangerYes);
+        panelRB1.add(radDangerNo);
+        panelCenter.add(panelRB1);
+
+
         btnSubmit.setFont(ft3);
+        panelSouth.add(btnSubmit);
+
 
         this.add(panelNorth, BorderLayout.NORTH);
         this.add(panelCenter, BorderLayout.CENTER);
@@ -149,14 +236,26 @@ public class SymptomsChecker extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         btnSubmit.addActionListener(this);
-        this.setSize(360, 600);
+
+        this.setSize(600, 600);
         this.pack();
         this.setVisible(true);
+    }
+    private boolean isInputValid() {
+        return true;
+    }
+    private void resetForm() {
+
+        radFatigueYes.setSelected(true);
 
     }
-
-    @Override
     public void actionPerformed(ActionEvent e) {
 
     }
+
+    public static void main(String[] args) {
+        new SymptomsChecker().setGUI();
+
+    }
+
 }
