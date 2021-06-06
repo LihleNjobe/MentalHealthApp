@@ -95,8 +95,8 @@ public class SymptomsChecker extends JFrame implements ActionListener {
     public void setGUI() {
         panelNorth.setLayout(new FlowLayout());
         panelCenter.setLayout(new GridLayout(8, 1));
-        panelRB1.setLayout(new GridLayout(1, 2));
-        panelRB2.setLayout(new GridLayout(1, 2));
+        panelRB1.setLayout(new GridLayout(1, 3));
+        panelRB2.setLayout(new GridLayout(8, 2));
         panelSouth.setLayout(new GridLayout(1, 3));
 
         panelNorth.add(lblHeading);
@@ -110,7 +110,7 @@ public class SymptomsChecker extends JFrame implements ActionListener {
         lblFatigue.setForeground(Color.white);
         lblFatigue.setHorizontalAlignment(JLabel.LEFT);
         radFatigueYes.setFont(ft2);
-        radFatigueYes.setHorizontalAlignment(JRadioButton.CENTER);
+        radFatigueYes.setHorizontalAlignment(JRadioButton.RIGHT);
         radFatigueYes.setBackground(Color.blue);
 
         panelCenter.add(lblFatigue);
