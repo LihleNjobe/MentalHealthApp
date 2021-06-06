@@ -15,7 +15,7 @@ public class SymptomsChecker extends JFrame implements ActionListener {
     private JPanel panelNorth;
     private JPanel panelCenter, panelRB1, panelRB2;
     private JPanel panelSouth;
-
+    private JButton searchB = new JButton();
     private JLabel lblHeading;
 
 
