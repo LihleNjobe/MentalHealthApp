@@ -59,30 +59,30 @@ public class SymptomsChecker extends JFrame implements ActionListener {
         lblHeading = new JLabel(" Symptoms Checker ");
 
         lblFatigue = new JLabel("Increased fatigue and sleeping problems ");
-        radFatigueYes = new JRadioButton("Yes");
+        radFatigueYes = new JRadioButton();
 
         lblAppetite = new JLabel("Do you have any appetite or weight changes ");
-        radAppetiteYes = new JRadioButton("Yes");
+        radAppetiteYes = new JRadioButton();
 
         lblInterest = new JLabel("Lost of interest ");
-        radInterestYes = new JRadioButton("Yes");
+        radInterestYes = new JRadioButton();
 
 
         lblAnger = new JLabel("Do you have anger or irritability " );
-        radAngerYes = new JRadioButton("Yes");
+        radAngerYes = new JRadioButton();
 
 
         lblNervous = new JLabel("Do you get restless or nervous " );
-        radNervousYes = new JRadioButton("Yes");
+        radNervousYes = new JRadioButton();
 
         lblDanger = new JLabel("Do you randomly feel in danger and panic " );
-        radDangerYes = new JRadioButton("Yes");
+        radDangerYes = new JRadioButton();
 
         lblHeartRate = new JLabel("Rapid Heart rate " );
-        radHeartRateYes = new JRadioButton("Yes");
+        radHeartRateYes = new JRadioButton();
 
         lblHeavySweating = new JLabel("Increased or heavy sweating " );
-        radHeavySweatingYes = new JRadioButton("Yes");
+        radHeavySweatingYes = new JRadioButton();
 
 
         btnSubmit = new JButton("Submit");
@@ -96,9 +96,9 @@ public class SymptomsChecker extends JFrame implements ActionListener {
     }
     public void setGUI() {
         panelNorth.setLayout(new FlowLayout());
-        panelCenter.setLayout(new GridLayout(8, 2));
+        panelCenter.setLayout(new GridLayout(8, 3));
         panelRB1.setLayout(new GridLayout(1, 2));
-        panelRB2.setLayout(new GridLayout(1, 2));
+        panelRB2.setLayout(new GridLayout(8, 2));
         panelSouth.setLayout(new GridLayout(1, 3));
 
         panelNorth.add(lblHeading);
@@ -112,7 +112,7 @@ public class SymptomsChecker extends JFrame implements ActionListener {
         lblFatigue.setForeground(Color.white);
         lblFatigue.setHorizontalAlignment(JLabel.LEFT);
         radFatigueYes.setFont(ft2);
-        radFatigueYes.setHorizontalAlignment(JRadioButton.CENTER);
+        radFatigueYes.setHorizontalAlignment(JRadioButton.RIGHT);
         radFatigueYes.setBackground(Color.blue);
 
         panelCenter.add(lblFatigue);
@@ -121,7 +121,6 @@ public class SymptomsChecker extends JFrame implements ActionListener {
 
         lblAppetite.setFont(ft2);
         lblAppetite.setForeground(Color.white);
-        lblAppetite.setHorizontalAlignment(JLabel.LEFT);
         radAppetiteYes.setFont(ft2);
         radAppetiteYes.setHorizontalAlignment(JRadioButton.RIGHT);
         radAppetiteYes.setBackground(Color.BLUE);
@@ -200,6 +199,7 @@ public class SymptomsChecker extends JFrame implements ActionListener {
         btnSubmit.setFont(ft3);
         btnClear.setFont(ft3);
         btnExit.setFont(ft3);
+
         panelSouth.add(btnSubmit);
         panelSouth.add(btnClear);
         panelSouth.add(btnExit);
@@ -221,11 +221,21 @@ public class SymptomsChecker extends JFrame implements ActionListener {
     private void resetForm() {
 
         radFatigueYes.setSelected(true);
+        radAppetiteYes.setSelected(true);
+        radInterestYes.setSelected(true);
+        radAngerYes.setSelected(true);
+        radNervousYes.setSelected(true);
+        radDangerYes.setSelected(true);
+        radHeartRateYes.setSelected(true);
+        radHeavySweatingYes.setSelected(true);
 
     }
     public void actionPerformed(ActionEvent e) {
+        if (e.getActionCommand().equals("Submit")) {
 
-           if (e.getActionCommand().equals("Clear")) {
+        }
+
+           else if (e.getActionCommand().equals("Clear")) {
             resetForm();
         }
         else if (e.getActionCommand().equals("Exit")) {
