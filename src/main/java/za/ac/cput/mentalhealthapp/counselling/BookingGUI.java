@@ -3,8 +3,12 @@ package za.ac.cput.mentalhealthapp.counselling;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
-public class BookingGUI extends JFrame{
+public class BookingGUI extends JFrame implements ActionListener {
     private JPanel topPanel;
     private JPanel mainPanel;
     private JPanel centerPanel;
@@ -27,6 +31,7 @@ public class BookingGUI extends JFrame{
     private JTextArea textArea4;
     private JButton submitButton;
     private JScrollPane scroller;
+    private JButton backBtn;
 
     public BookingGUI(){
         super("Book Session");
@@ -40,6 +45,16 @@ public class BookingGUI extends JFrame{
         textArea3.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         textArea4.setBorder(BorderFactory.createLineBorder(Color.BLACK));
         submitButton.setPreferredSize(new Dimension(40, 30));
+        backBtn.addActionListener(this);
+
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getActionCommand().equals("<")){
+            new CounsellingGUI().setGUI();
+            this.setVisible(false);
+        }
 
     }
 
