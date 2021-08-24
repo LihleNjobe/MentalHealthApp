@@ -31,8 +31,6 @@ public class CounsellingGUI extends JFrame implements ActionListener{
         this.pack();
         this.setSize(360, 600);
         this.setVisible(true);
-
-
         bookSessionButton.addActionListener(this);
     }
 
