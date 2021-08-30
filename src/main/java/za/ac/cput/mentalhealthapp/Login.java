@@ -36,6 +36,8 @@ public class Login implements ActionListener {
         loginButton.setFocusable(false);
         loginButton.addActionListener(this);
 
+        frame.setBackground(new Color(19, 162, 254));
+        frame.setForeground(new Color(19, 162, 254));
         frame.add(lbluserName);
         frame.add(lblPassword);
         frame.add(lblMessage);
