@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="za.ac.cput.mentalhealthapp.counselling.GUIs.ServicesGUI">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="2829" height="20536"/>
+    </constraints>
+    <properties>
+      <background color="-15490818"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="2fa51" binding="topPanel" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-15490818"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <vspacer id="7aaaa">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <component id="bd9ed" class="javax.swing.JButton" binding="button1" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-15490818"/>
+              <font size="28" style="1"/>
+              <hideActionText value="true"/>
+              <text value="&lt;"/>
+            </properties>
+          </component>
+          <component id="77cf3" class="javax.swing.JLabel" binding="txtHeading1">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="265" height="15"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font size="18" style="1"/>
+              <text value="Individual Counselling"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <vspacer id="6e4fc">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <scrollpane id="45c13">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="d0d03" binding="centerPanel" layout-manager="GridLayoutManager" row-count="7" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints/>
+            <properties>
+              <background color="-15490818"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="487fc" class="javax.swing.JTextArea" binding="TextArea">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-15490818"/>
+                  <editable value="false"/>
+                  <lineWrap value="true"/>
+                  <rows value="5"/>
+                  <text value="When should you consider individual counselling?&#10;&#10;- When you have problems adjusting to campus, or residence life.&#10;- When you have a personal, emotional, welfare or relationship problem, which negatively impacts on your studies.&#10;- When you're experiencing a personal crisis, or have a traumatic experience and need someone to talk to.&#10;- When you've succumbed to negative peer pressure, which negatively impacts on your academic performance.&#10;."/>
+                  <wrapStyleWord value="true"/>
+                </properties>
+              </component>
+              <hspacer id="69375">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <vspacer id="e5e4">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <vspacer id="c01bd">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="781b0" class="javax.swing.JTextArea" binding="TextArea2">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-15490818"/>
+                  <lineWrap value="true"/>
+                  <text value="You may use this service when you:&#10;&#10;- Are unsure whether you are in the right course and need confrimation.&#10;- Are unhappy with your choice of course / career and are unsure what other options you have.&#10;- Want to consider advanced study options.&#10;- Want to learn more about your personality strengths and weaknesses, career related interests and values.&#10;&#10;This service may include a psychometric assessment and is free of charge if you are a registered CPUT student. Assessments make use of questionnaires and tests to help identify your interests, values, personality preferences and abilities so that the counsellors can make recommendations on suitable courses or careers. To use the service, you need to book an appointment to see a student counsellor."/>
+                </properties>
+              </component>
+              <component id="6494d" class="javax.swing.JLabel" binding="txtHeading2">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-16777216"/>
+                  <enabled value="true"/>
+                  <font size="18" style="1"/>
+                  <text value="Career Counselling&#10;"/>
+                </properties>
+              </component>
+              <vspacer id="c0a40">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <vspacer id="45fd7">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+            </children>
+          </grid>
+        </children>
+      </scrollpane>
+    </children>
+  </grid>
+</form>

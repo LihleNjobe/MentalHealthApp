@@ -3,7 +3,7 @@ package za.ac.cput.mentalhealthapp.counselling.GUIs;
 import za.ac.cput.mentalhealthapp.counselling.DAO.BookingDAO;
 import za.ac.cput.mentalhealthapp.counselling.ModelClasses.Booking;
 
-import javax.mail.Message;
+import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -17,10 +17,7 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.util.Properties;
 import java.util.UUID;
-import javax.mail.Session;
-import javax.mail.PasswordAuthentication;
 import javax.mail.internet.MimeMessage;
-import javax.mail.Transport;
 
 public class BookingGUI extends JFrame {
     private JPanel topPanel;
@@ -51,6 +48,7 @@ public class BookingGUI extends JFrame {
     private JTextArea textArea1;
     private JButton submitBtn;
     private JTextField txtStudentNum;
+    private JLabel heading;
     private JTextArea txtFromEmail;
     private JTextArea txtStudentName;
     private JTextArea txtStudentPhoneNumber;
@@ -86,6 +84,9 @@ public class BookingGUI extends JFrame {
             }
         });
 
+        backBtn.setForeground(Color.WHITE);
+        heading.setForeground(Color.WHITE);
+
         //CheckBox for Group Counselling
         gCounsellingCheckBox.addItemListener(new ItemListener() {
             @Override
@@ -107,7 +108,17 @@ public class BookingGUI extends JFrame {
                 student_number = Integer.parseInt(txtStudentNum.getText());
                 Booking booking = new Booking(booking_id, booking_type, date, student_number);
                 new BookingDAO().AddBooking(booking, student_number);
-                //submitForm();
+
+                new BookingDAO().Connect();
+                new BookingDAO().RetrieveBookings(218196504);
+                new TableGUI().setGUI();
+                //this.setVisible(false);
+                BookingGUI.this.setVisible(false);
+                try {
+                    sendMail("lindokuhlepaul6@gmail.com");
+                } catch (MessagingException messagingException) {
+                    messagingException.printStackTrace();
+                }
             }
         });
 
@@ -115,7 +126,7 @@ public class BookingGUI extends JFrame {
         backBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new CounsellingGUI().setGUI();
+                new TableGUI().setGUI();
                 this.setVisible(false);
             }
 
@@ -125,13 +136,7 @@ public class BookingGUI extends JFrame {
     }
 
     //Send booking info via email
-    public void submitForm(){
-        String ToEmail = "lindokuhlepaul6@gmail.com";
-        final String FromEmail = "lindokuhlepaul6@gmail.com";
-        final String FromEmailPassword = "as3minathi";
-        String subject = "Counselling Booking";
-        String emailText = "Good day Ma'am / Sir" +
-                "\n I would like to book a counseling session";
+    public void sendMail(String recepient) throws MessagingException {
 
         JOptionPane.showMessageDialog(this,"Successfully Submitted!");
 
@@ -141,24 +146,45 @@ public class BookingGUI extends JFrame {
         properties.put("mail.smtp.host", "smtp.gmail.com");
         properties.put("mail.smtp.port", "587");
 
-        Session session = Session.getDefaultInstance(properties, new javax.mail.Authenticator(){
+//        properties.setProperty("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+//        properties.setProperty("mail.smtp.socketFactory.fallback", "false");
+//        properties.setProperty("mail.smtp.port", "465");
+//        properties.setProperty("mail.smtp.socketFactory.port", "465");
+
+        final String FromEmail = "cputproject3@gmail.com";
+        final String FromEmailPassword = "FinalProject@2021";
+
+        Session session = Session.getInstance(properties, new javax.mail.Authenticator(){
             protected PasswordAuthentication getPasswordAuthentication(){
                 return new PasswordAuthentication(FromEmail, FromEmailPassword);
             }
-
         });
+
+        Message message = prepareMessage(session, FromEmail, recepient);
+
+            Transport.send(message);
+            System.out.println("Message sent successfully");
+
+
+    }
+
+    private Message prepareMessage(Session session, String FromEmail, String recepient){
+
+        String subject = "Counselling Booking";
+        String emailText = "Good day Ma'am / Sir" +
+                "\n I would like to book a counseling session";
 
         try{
             MimeMessage message = new MimeMessage(session);
             message.setFrom(new InternetAddress(FromEmail));
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(ToEmail));
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress(recepient));
             message.setSubject(subject);
             message.setText(emailText);
-            Transport.send(message);
+            return message;
         } catch (Exception ex){
             System.out.println(""+ex);
         }
-
+        return null;
     }
 
     public static void main(String[] args) {

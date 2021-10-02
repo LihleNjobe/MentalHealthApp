@@ -35,7 +35,8 @@ class counsellingTest {
         System.out.println("Number of rows previously: "+currentRows);
 
         //Create new booking
-        Booking booking = new Booking(booking_id, "Group counselling", date, 235586956);
+        Booking booking = new Booking(booking_id, "Group counselling",
+                date, 235586956);
         new BookingDAO().AddBooking(booking, 235586956);
 
         //Number of records in new table
@@ -48,7 +49,8 @@ class counsellingTest {
     @Test
     void b_retrieve(){
         //Create new booking
-        Booking booking = new Booking(booking_id, "Group counselling", date, 218896555);
+        Booking booking = new Booking(booking_id, "Group counselling",
+                date, 218896555);
         new BookingDAO().AddBooking(booking, 218896555);
 
         //Retrieve booking
@@ -82,7 +84,8 @@ class counsellingTest {
         System.out.println("Number of rows previously: "+currentRows);
 
         //Create new booking
-        Booking booking = new Booking(booking_id, "Group counselling", date, 123456789);
+        Booking booking = new Booking(booking_id, "Group counselling",
+                date, 123456789);
         new BookingDAO().AddBooking(booking, 123456789);
 
         //Number of records in new table

@@ -55,11 +55,12 @@ public class TableGUI extends JFrame implements ActionListener {
         northPanel.setBackground(new Color(15, 160, 254));
         btnBack.setFont(ft1);
         btnBack.setBackground(new Color(15, 160, 254));
-        northPanel.add(btnBack);
+        northPanel.add(btnBack, BorderLayout.WEST);
         northPanel.add(lblHeading);
 
-        //centerPanel.setLayout(new GridLayout(10, 2));
-        //centerPanel.setBorder(new EmptyBorder(50, 0, 120, 500));
+        btnBack.setForeground(Color.WHITE);
+        btnBack.setHorizontalAlignment(SwingConstants.LEFT);
+
         centerPanel.setBackground(Color.WHITE);
         displayBookings();
 
@@ -67,6 +68,7 @@ public class TableGUI extends JFrame implements ActionListener {
         btnNewBooking.setFont(ft3);
         btnNewBooking.setBackground(new Color(15, 160, 254));
         btnNewBooking.addActionListener(this);
+        btnBack.addActionListener(this);
         southPanel.add(btnNewBooking);
 
         this.add(northPanel, BorderLayout.NORTH);
@@ -99,9 +101,7 @@ public class TableGUI extends JFrame implements ActionListener {
 
         for (int i = 0; i < arrVec.size(); i++) {
             vect = arrVec.get(i);
-            //System.out.println(vect+"\n");
             tableModel.addRow(vect);
-            //System.out.println(tableModel);
         }
 
         tblBookings = new JTable(tableModel);
@@ -110,7 +110,6 @@ public class TableGUI extends JFrame implements ActionListener {
 
         tblBookings.getSelectionModel().addListSelectionListener(new ListSelectionListener(){
             public void valueChanged(ListSelectionEvent event) {
-                //System.out.println(tblBookings.getValueAt(tblBookings.getSelectedRow(), 0).toString());
                 JFrame frame = new JFrame();
                 JPanel panel = new JPanel();
                 JButton btnDelete = new JButton("Delete row");
@@ -119,7 +118,6 @@ public class TableGUI extends JFrame implements ActionListener {
                 panel.add(btnDelete);
                 panel.add(btnClose);
                 frame.add(panel);
-//                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.pack();
                 frame.setVisible(true);
                 frame.setLocation(180, 300);
@@ -132,6 +130,8 @@ public class TableGUI extends JFrame implements ActionListener {
                         bid = tblBookings.getValueAt(tblBookings.getSelectedRow(), 0).toString();
 
                         new BookingDAO().deleteBooking(bid);
+
+
                     }
                 });
                 btnClose.addActionListener(new ActionListener() {
@@ -143,9 +143,6 @@ public class TableGUI extends JFrame implements ActionListener {
 
             }
         });
-
-        //Frame Size
-        //sp.setSize(360, 600);
         sp.setPreferredSize(new Dimension(340, 600));
 
     }
@@ -159,6 +156,10 @@ public class TableGUI extends JFrame implements ActionListener {
         if (e.getActionCommand().equals("New Booking")) {
             this.setVisible(false);
             new BookingGUI();
+        }
+        if (e.getActionCommand().equals("<")) {
+            this.setVisible(false);
+            new CounsellingGUI().setGUI();
         }
     }
 }

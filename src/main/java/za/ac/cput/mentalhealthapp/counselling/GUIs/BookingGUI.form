@@ -23,16 +23,19 @@
         <children>
           <component id="e6a35" class="javax.swing.JButton" binding="backBtn">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="250" height="15"/>
+              </grid>
             </constraints>
             <properties>
               <background color="-15490818"/>
               <font size="28" style="1"/>
               <hideActionText value="false"/>
+              <horizontalAlignment value="10"/>
               <text value="&lt;"/>
             </properties>
           </component>
-          <component id="2d79b" class="javax.swing.JLabel">
+          <component id="2d79b" class="javax.swing.JLabel" binding="heading">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                 <preferred-size width="230" height="10"/>
