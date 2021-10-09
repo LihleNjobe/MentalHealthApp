@@ -76,8 +76,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SymptomsChecker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="za.ac.cput.mentalhealthapp.symptoms.SymptomsChecker" />
+    <configuration name="Symptoms" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.mentalhealthapp.symptoms.Symptoms" />
       <module name="MentalHealthApp" />
       <extension name="coverage">
         <pattern>

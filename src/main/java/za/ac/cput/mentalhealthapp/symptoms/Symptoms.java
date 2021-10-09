@@ -10,7 +10,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class SymptomsChecker extends JFrame implements ActionListener {
+public class Symptoms extends JFrame implements ActionListener {
 
     private JPanel panelNorth;
     private JPanel panelCenter, panelRB1, panelRB2;
@@ -52,7 +52,7 @@ public class SymptomsChecker extends JFrame implements ActionListener {
     private JButton btnSubmit,btnClear, btnExit;
     private Font ft1, ft2, ft3;
 
-    public SymptomsChecker() {
+    public Symptoms() {
         panelNorth = new JPanel();
         panelCenter = new JPanel();
         panelRB1 = new JPanel();
@@ -265,7 +265,7 @@ public class SymptomsChecker extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new SymptomsChecker().setGUI();
+        new Symptoms().setGUI();
 
     }
 
