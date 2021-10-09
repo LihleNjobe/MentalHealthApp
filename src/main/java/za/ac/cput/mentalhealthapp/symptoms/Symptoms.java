@@ -24,6 +24,7 @@ public class Symptoms extends JFrame implements ActionListener {
     private JPanel heartRatePanel;
     private JPanel sweatingPanel;
     private JPanel nervesPanel;
+    private JLabel space;
 
     private JLabel lblFatigue;
     private JRadioButton radFatigueYes;
@@ -67,8 +68,9 @@ public class Symptoms extends JFrame implements ActionListener {
         panicPanel = new JPanel();
         heartRatePanel = new JPanel();
         sweatingPanel = new JPanel();
+        space = new JLabel("");
 
-        lblHeading = new JLabel(" Symptoms Checker ");
+        lblHeading = new JLabel(" Symptoms Checker ", JLabel.CENTER);
 
         lblFatigue = new JLabel("Increased fatigue and sleeping problems ");
         radFatigueYes = new JRadioButton();
@@ -105,7 +107,7 @@ public class Symptoms extends JFrame implements ActionListener {
     }
     public void setGUI() {
         panelNorth.setLayout(new FlowLayout());
-        panelCenter.setLayout(new GridLayout(8, 3));
+        panelCenter.setLayout(new GridLayout(10, 3));
 
         panelRB1.setLayout(new GridLayout(1, 2));
         panelRB2.setLayout(new GridLayout(8, 2));
@@ -127,6 +129,8 @@ public class Symptoms extends JFrame implements ActionListener {
         lblHeading.setForeground(Color.white);
         panelNorth.setBackground(Color.blue);
         panelCenter.setBackground(Color.blue);
+
+//        panelCenter.add(space);
 
         lblFatigue.setFont(ft2);
         lblFatigue.setForeground(Color.white);
