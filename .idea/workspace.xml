@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51b914fe-a346-4318-aee4-dac492d636ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/mentalhealthapp/SymptomsChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/mentalhealthapp/symptoms/checker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +41,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/za/ac/cput/mentalhealthapp" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -46,13 +49,13 @@
       <recent name="C:\Users\Lindokuhle Nini\OneDrive\Mental Health App\MentalHealthApp\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CounsellingGUI">
+  <component name="RunManager" selected="Application.SymptomsChecker">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="za.ac.cput.mentalhealthapp.App" />
       <module name="MentalHealthApp" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="za.ac.cput.mentalhealthapp.*" />
+          <option name="PATTERN" value="za.ac.cput.mentalhealthapp.symptoms.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -73,10 +76,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SymptomsChecker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.mentalhealthapp.symptoms.SymptomsChecker" />
+      <module name="MentalHealthApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.mentalhealthapp.symptoms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="checker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.mentalhealthapp.symptoms.checker" />
+      <module name="MentalHealthApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.mentalhealthapp.symptoms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CounsellingGUI" />
-        <item itemvalue="Application.App" />
+        <item itemvalue="Application.SymptomsChecker" />
+        <item itemvalue="Application.checker" />
         <item itemvalue="Application.CounsellingGUI" />
         <item itemvalue="Application.App" />
         <item itemvalue="Application.CounsellingGUI" />
