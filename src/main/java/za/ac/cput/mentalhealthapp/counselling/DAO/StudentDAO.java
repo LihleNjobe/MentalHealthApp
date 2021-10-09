@@ -12,25 +12,20 @@ public class StudentDAO {
     int student_number;
 
     //Connect to MySQL Database
-    public void Connect()
-    {
+    public void Connect() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            con = DriverManager.getConnection("jdbc:mysql://localhost/affirmation", "root","");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/affirmation", "root", "");
             System.out.println("Success");
-        }
-        catch (ClassNotFoundException ex)
-        {
+        } catch (ClassNotFoundException ex) {
             ex.printStackTrace();
-        }
-        catch (SQLException ex)
-        {
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }
 
     //Retrieve data from database
-    public void RetrieveStudentData(){
+    public void RetrieveStudentData() {
         try {
 
 //            student_number = Integer.parseInt(txtStudentNum.getText());
@@ -39,8 +34,7 @@ public class StudentDAO {
 //            pst.setInt(1, student_number);
             ResultSet rs = pst.executeQuery();
 
-            if(rs.next())
-            {
+            if (rs.next()) {
                 student_number = rs.getInt(1);
                 first_name = rs.getString(2);
                 last_name = rs.getString(3);
@@ -48,16 +42,11 @@ public class StudentDAO {
                 phone_number = rs.getString(5);
 
 
-            }
-            else
-            {
-                JOptionPane.showMessageDialog(null,"Invalid Student");
+            } else {
+                JOptionPane.showMessageDialog(null, "Invalid Student");
 
             }
-        }
-
-        catch (SQLException ex)
-        {
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }

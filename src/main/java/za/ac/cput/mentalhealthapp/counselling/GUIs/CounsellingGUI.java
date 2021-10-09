@@ -13,7 +13,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Vector;
 
-public class CounsellingGUI extends JFrame{
+public class CounsellingGUI extends JFrame {
     private JPanel mainPanel;
     private JPanel topPanel;
     private JLabel logoLabel;
@@ -23,19 +23,40 @@ public class CounsellingGUI extends JFrame{
     private JButton servicesButton;
     private JButton bookingsBtn;
     private JButton supportGroupsButton;
+    private JPanel southPanel;
+    private JPanel navPanel;
+    private JButton homeButton;
+    private JButton profileButton;
+    private JButton counsellingButton;
     public static ArrayList<Vector> vecArr = new ArrayList<>();
 
-    public CounsellingGUI(){
+    public CounsellingGUI() {
         super("Student Counselling");
+
+    }
+
+    public void setGUI() {
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setContentPane(mainPanel);
+        StyledDocument doc = introText.getStyledDocument();
+        SimpleAttributeSet center = new SimpleAttributeSet();
+        StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
+        doc.setParagraphAttributes(0, doc.getLength(), center, false);
+
+        introText.setForeground(Color.WHITE);
+        introLabel.setForeground(Color.WHITE);
+
+        this.pack();
+        this.setSize(360, 600);
+        this.setVisible(true);
 
         bookingsBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+//                CounsellingGUI.this.dispose();
                 new BookingDAO().Connect();
                 new BookingDAO().RetrieveBookings(218196504);
                 new TableGUI().setGUI();
-                //this.setVisible(false);
-                CounsellingGUI.this.setVisible(false);
             }
         });
         servicesButton.addActionListener(new ActionListener() {
@@ -50,26 +71,6 @@ public class CounsellingGUI extends JFrame{
                 new SadagGUI().setupUI();
             }
         });
-    }
-
-    public void setGUI(){
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setContentPane(mainPanel);
-        StyledDocument doc = introText.getStyledDocument();
-        SimpleAttributeSet center = new SimpleAttributeSet();
-        StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
-        doc.setParagraphAttributes(0, doc.getLength(), center, false);
-
-        introText.setForeground(Color.WHITE);
-        introLabel.setForeground(Color.WHITE);
-
-//        servicesButton.setForeground(Color.WHITE);
-//        bookingsBtn.setForeground(Color.WHITE);
-//        supportGroupsButton.setForeground(Color.WHITE);
-
-        this.pack();
-        this.setSize(360, 600);
-        this.setVisible(true);
     }
 
     public static void main(String[] args) {
