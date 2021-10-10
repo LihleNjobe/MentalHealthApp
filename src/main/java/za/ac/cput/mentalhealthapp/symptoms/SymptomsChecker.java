@@ -23,6 +23,9 @@ public class SymptomsChecker {
 
     }
 
+    public SymptomsChecker(boolean selected, boolean selected1, boolean selected2, boolean selected3, boolean selected4, boolean selected5, boolean selected6, boolean selected7) {
+    }
+
     public void submit() {
         PrintWriter out = null;
         String message = "The information is submitted";

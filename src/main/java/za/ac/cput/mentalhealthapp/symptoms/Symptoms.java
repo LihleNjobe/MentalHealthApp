@@ -270,7 +270,7 @@ public class Symptoms extends JFrame implements ActionListener {
             radNervousYes.isSelected(),
             radDangerYes.isSelected(),
              radHeartRateYes.isSelected(),
-             radHeavySweatingYes.isSelected();
+             radHeavySweatingYes.isSelected());
             checker.submit();
            clearForm();
             }
