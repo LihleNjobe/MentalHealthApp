@@ -1,9 +1,7 @@
-package za.ac.cput.mentalhealthapp;
+package za.ac.cput.mentalhealthapp.auth;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 public class SignIn extends JFrame {
     private JFrame mainFrame;
