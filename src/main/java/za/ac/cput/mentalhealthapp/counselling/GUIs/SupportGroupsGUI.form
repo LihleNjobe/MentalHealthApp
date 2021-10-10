@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="za.ac.cput.mentalhealthapp.counselling.GUIs.SupportGroupsGUI">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="386" height="705"/>
+    </constraints>
+    <properties>
+      <background color="-15490818"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="14090" binding="topPanel" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-15490818"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <vspacer id="5f4cf">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
+          <component id="4b8d6" class="javax.swing.JButton" binding="button1" default-binding="true">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-15490818"/>
+              <font size="28" style="1"/>
+              <hideActionText value="true"/>
+              <text value="&lt;"/>
+            </properties>
+          </component>
+          <component id="984bc" class="javax.swing.JLabel" binding="txtHeading1">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="250" height="15"/>
+              </grid>
+            </constraints>
+            <properties>
+              <font size="18" style="1"/>
+              <text value="About SADAG"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <scrollpane id="a77d7">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="52d89" binding="centerPanel" layout-manager="GridLayoutManager" row-count="7" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints/>
+            <properties>
+              <background color="-15490818"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="f0d66" class="javax.swing.JTextArea" binding="TextArea">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-15490818"/>
+                  <editable value="false"/>
+                  <lineWrap value="true"/>
+                  <rows value="5"/>
+                  <text value="&#10;SADAG is a registered Non-Profit Organisation and it is the leading voice of patient advocacy in the mental health sector. SADAG is at the forefront of increasing psychosocial education and training at various levels.&#10;&#10;SADAG also helps to facilitate over 200 Support Groups nationwide. These are run by patients for patients and offer a safe place for people living with mental health illnesses to share, network, connect and provide informationon on how they cope each day."/>
+                  <wrapStyleWord value="true"/>
+                </properties>
+              </component>
+              <hspacer id="9208f">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <vspacer id="d8a3">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="86f83" class="javax.swing.JLabel" binding="heading2">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="18" style="1"/>
+                  <text value="Types of support groups"/>
+                </properties>
+              </component>
+              <component id="ca044" class="javax.swing.JTextArea" binding="groups">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <background color="-15490818"/>
+                  <lineWrap value="true"/>
+                  <text value="SADAG has many different types of Support Groups, each serve different communities and different issues. In this manual you will also find methods of speaking to people in your community to identify which Support Group will meet the needs for the people in the community. You can also choose what type of Support Group you would like to run based on your own mental health journey, passion, or interests.&#10;&#10;There are is an endless list of different types of Support Groups, these include, but are not limited to&#10;&#10;Depression&#10;Anxiety&#10;Trauma&#10;PTSD&#10;Substance abuse&#10;Bipolar Disorder&#10;Post / Peri Natal Depression&#10;Support Groups for loved ones and family members who have loved ones with mental illness&#10;Groups for people who have lost loved ones to suicide, and so on&#10;Unemployment&#10;Managing retirement&#10;HIV/AIDS"/>
+                </properties>
+              </component>
+              <vspacer id="a6c70">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <component id="d409" class="javax.swing.JLabel" binding="heading3">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font size="18" style="1"/>
+                  <text value="How to join"/>
+                </properties>
+              </component>
+              <grid id="cfacb" binding="videoPanel" custom-create="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children/>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </scrollpane>
+    </children>
+  </grid>
+</form>

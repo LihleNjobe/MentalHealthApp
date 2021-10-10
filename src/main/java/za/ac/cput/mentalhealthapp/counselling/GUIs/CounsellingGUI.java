@@ -3,6 +3,9 @@ package za.ac.cput.mentalhealthapp.counselling.GUIs;
 import za.ac.cput.mentalhealthapp.counselling.DAO.BookingDAO;
 
 import javax.swing.*;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,7 +13,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Vector;
 
-public class CounsellingGUI extends JFrame{
+public class CounsellingGUI extends JFrame {
     private JPanel mainPanel;
     private JPanel topPanel;
     private JLabel logoLabel;
@@ -20,38 +23,54 @@ public class CounsellingGUI extends JFrame{
     private JButton servicesButton;
     private JButton bookingsBtn;
     private JButton supportGroupsButton;
-    Connection con;
-    PreparedStatement pst;
-    String first_name, last_name, email, phone_number;
-    int student_number;
-    String booking_type;
-    Date date;
-    String student_name;
-    public static String bookingData;
+    private JPanel southPanel;
+    private JPanel navPanel;
+    private JButton homeButton;
+    private JButton profileButton;
+    private JButton counsellingButton;
     public static ArrayList<Vector> vecArr = new ArrayList<>();
 
-
-    public CounsellingGUI(){
+    public CounsellingGUI() {
         super("Student Counselling");
+
+    }
+
+    public void setGUI() {
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setContentPane(mainPanel);
+        StyledDocument doc = introText.getStyledDocument();
+        SimpleAttributeSet center = new SimpleAttributeSet();
+        StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
+        doc.setParagraphAttributes(0, doc.getLength(), center, false);
+
+        introText.setForeground(Color.WHITE);
+        introLabel.setForeground(Color.WHITE);
+
+        this.pack();
+        this.setSize(360, 600);
+        this.setVisible(true);
 
         bookingsBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+//                CounsellingGUI.this.dispose();
                 new BookingDAO().Connect();
-                new BookingDAO().RetrieveBookings(218896555);
+                new BookingDAO().RetrieveBookings(218196504);
                 new TableGUI().setGUI();
-                //this.setVisible(false);
-                CounsellingGUI.this.setVisible(false);
             }
         });
-    }
-
-    public void setGUI(){
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setContentPane(mainPanel);
-        this.pack();
-        this.setSize(360, 600);
-        this.setVisible(true);
+        servicesButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new ServicesGUI();
+            }
+        });
+        supportGroupsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new SadagGUI().setupUI();
+            }
+        });
     }
 
     public static void main(String[] args) {
@@ -60,9 +79,9 @@ public class CounsellingGUI extends JFrame{
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
-        //logoLabel = new JLabel(new ImageIcon("images/logo.png"));
         logoLabel = new JLabel();
-        ImageIcon logoIcon = new ImageIcon(new ImageIcon("images/logo.png").getImage().getScaledInstance(120, 120, Image.SCALE_SMOOTH));
+        ImageIcon logoIcon = new ImageIcon(new ImageIcon("images/logo.png").getImage().
+                getScaledInstance(120, 120, Image.SCALE_SMOOTH));
         logoLabel.setIcon(logoIcon);
 
     }

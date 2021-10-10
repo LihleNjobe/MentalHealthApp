@@ -1,13 +1,9 @@
 package za.ac.cput.mentalhealthapp.counselling.DAO;
 
 import za.ac.cput.mentalhealthapp.counselling.ModelClasses.Booking;
-import za.ac.cput.mentalhealthapp.counselling.ModelClasses.Student;
 
 import javax.swing.*;
-import java.nio.ByteBuffer;
 import java.sql.*;
-import java.time.LocalDate;
-import java.util.UUID;
 import java.util.Vector;
 
 import static za.ac.cput.mentalhealthapp.counselling.GUIs.CounsellingGUI.vecArr;
@@ -22,10 +18,11 @@ public class BookingDAO {
 
     //Connect to MySQL Database
     public void Connect() {
+        System.out.println("Connecting to database");
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost/affirmation", "root", "");
-            //System.out.println("Success");
+            System.out.println("Connection successful");
         } catch (ClassNotFoundException ex) {
             ex.printStackTrace();
         } catch (SQLException ex) {
@@ -38,12 +35,9 @@ public class BookingDAO {
         Connect();
 
         try {
-
-//            student_number = Integer.parseInt(txtStudentNum.getText());
-//            pst = con.prepareStatement("select first_name,last_name,email,phone_number from students where student_number = ?");
             pst = con.prepareStatement("select student_number,first_name,last_name,email,phone_number from students");
-//            pst.setInt(1, student_number);
             ResultSet rs = pst.executeQuery();
+            System.out.println("Student data retrieved");
 
             if (rs.next()) {
                 student_number = rs.getInt(1);
@@ -59,11 +53,47 @@ public class BookingDAO {
         }
     }
 
-    //Add records to Bookings table in database
-    public void AddBooking(Booking b, int student_number) {
-
+    public String RetrieveStudentName(int sNumber) {
         Connect();
 
+        try {
+            pst = con.prepareStatement("select first_name from students where student_number = ?");
+            pst.setInt(1, sNumber);
+            ResultSet rs = pst.executeQuery();
+
+            if (rs.next()) {
+                first_name = rs.getString(1);
+            } else {
+                JOptionPane.showMessageDialog(null, "Invalid Student");
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return first_name;
+    }
+
+    public String RetrieveStudentSurname(int sNumber) {
+        Connect();
+
+        try {
+            pst = con.prepareStatement("select last_name from students where student_number = ?");
+            pst.setInt(1, sNumber);
+            ResultSet rs = pst.executeQuery();
+
+            if (rs.next()) {
+                last_name = rs.getString(1);
+            } else {
+                JOptionPane.showMessageDialog(null, "Invalid Student");
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+        return last_name;
+    }
+
+    //Add records to Bookings table in database
+    public void AddBooking(Booking b, int student_number) {
+        Connect();
         try {
 
             //student_number = Integer.parseInt(txtStudentNum.getText());
@@ -72,7 +102,6 @@ public class BookingDAO {
             ResultSet rs = pst.executeQuery();
 
             if (rs.next()) {
-
                 try {
                     pst = con.prepareStatement("insert into bookings(booking_id,booking_type,date,student_number)values(?,?,?,?)");
                     pst.setString(1, b.getBooking_id());
@@ -82,15 +111,11 @@ public class BookingDAO {
                     pst.executeUpdate();
                     count++;
                     JOptionPane.showMessageDialog(null, "Successfully Submitted!!!");
+                    System.out.println("Booking added to database successfully");
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }
-
-            } else {
-                //JOptionPane.showMessageDialog(null, "Invalid student");
-
             }
-
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
@@ -98,54 +123,37 @@ public class BookingDAO {
 
     //Retrieve data from database
     public void RetrieveBookings(int student_number) {
-
         Connect();
-
         try {
-
-            pst = con.prepareStatement("select booking_id,booking_type,date from bookings where student_number = ?");
+            pst = con.prepareStatement("select booking_type,date from bookings where student_number = ?");
             pst.setInt(1, student_number);
             ResultSet rs = pst.executeQuery();
 
             ResultSetMetaData rd = rs.getMetaData();
             int a = rd.getColumnCount();
             count = 0;
-
             while (rs.next()) {
-
                 Vector vect = new Vector();
-
                 for (int i = 1; i <= a; i++) {
-                    vect.add(rs.getString("booking_id"));
                     vect.add(rs.getString("booking_type"));
                     vect.add(rs.getDate("date"));
                     count++;
                 }
                 vecArr.add(vect);
-                System.out.println(vecArr);
+//                System.out.println(vecArr);
             }
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
     }
 
-    public void deleteBooking(String bid){
-
+    public void deleteBooking(String bid) {
         Connect();
-
         try {
             pst = con.prepareStatement("delete from bookings where booking_id = ?");
             pst.setString(1, bid);
-
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Record Deleted!!!!!");
-
-        }
-
-        catch (SQLException e1)
-        {
-
+        } catch (SQLException e1) {
             e1.printStackTrace();
         }
     }
