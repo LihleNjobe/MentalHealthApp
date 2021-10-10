@@ -9,6 +9,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 
 public class Symptoms extends JFrame implements ActionListener {
 
@@ -50,7 +52,7 @@ public class Symptoms extends JFrame implements ActionListener {
     private JLabel lblHeavySweating;
     private JRadioButton radHeavySweatingYes;
 
-    private JButton btnSubmit,btnClear, btnExit;
+    private JButton btnSubmit, btnClear, btnExit;
     private Font ft1, ft2, ft3;
 
     public Symptoms() {
@@ -81,19 +83,19 @@ public class Symptoms extends JFrame implements ActionListener {
         lblInterest = new JLabel("Lost of interest ");
         radInterestYes = new JRadioButton();
 
-        lblAnger = new JLabel("Do you have anger or irritability " );
+        lblAnger = new JLabel("Do you have anger or irritability ");
         radAngerYes = new JRadioButton();
 
-        lblNervous = new JLabel("Do you get restless or nervous " );
+        lblNervous = new JLabel("Do you get restless or nervous ");
         radNervousYes = new JRadioButton();
 
-        lblDanger = new JLabel("Do you randomly feel in danger and panic " );
+        lblDanger = new JLabel("Do you randomly feel in danger and panic ");
         radDangerYes = new JRadioButton();
 
-        lblHeartRate = new JLabel("Rapid Heart rate " );
+        lblHeartRate = new JLabel("Rapid Heart rate ");
         radHeartRateYes = new JRadioButton();
 
-        lblHeavySweating = new JLabel("Increased or heavy sweating " );
+        lblHeavySweating = new JLabel("Increased or heavy sweating ");
         radHeavySweatingYes = new JRadioButton();
 
         btnSubmit = new JButton("Submit");
@@ -105,6 +107,7 @@ public class Symptoms extends JFrame implements ActionListener {
         ft3 = new Font("Arial", Font.PLAIN, 16);
 
     }
+
     public void setGUI() {
         panelNorth.setLayout(new FlowLayout());
         panelCenter.setLayout(new GridLayout(10, 3));
@@ -235,16 +238,15 @@ public class Symptoms extends JFrame implements ActionListener {
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         btnSubmit.addActionListener(this);
+        btnClear.addActionListener(this);
+        btnExit.addActionListener(this);
 
         this.setPreferredSize(new Dimension(360, 600));
         this.pack();
         this.setVisible(true);
     }
-    private boolean isInputValid() {
-        return true;
-    }
-    private void resetForm() {
 
+    private void clearForm() {
         radFatigueYes.setSelected(true);
         radAppetiteYes.setSelected(true);
         radInterestYes.setSelected(true);
@@ -253,24 +255,36 @@ public class Symptoms extends JFrame implements ActionListener {
         radDangerYes.setSelected(true);
         radHeartRateYes.setSelected(true);
         radHeavySweatingYes.setSelected(true);
+    }
 
+    private boolean isInputValid() {
+        return true;
     }
     public void actionPerformed(ActionEvent e) {
-        if (e.getActionCommand().equals("Submit")) {
-
-        }
-
-        else if (e.getActionCommand().equals("Clear")) {
-            resetForm();
-        }
+    if (e.getActionCommand().equals("Submit")) {
+        if (isInputValid()) {
+            SymptomsChecker checker = new SymptomsChecker(radFatigueYes.isSelected(),
+            radAppetiteYes.isSelected(),
+            radInterestYes.isSelected(),
+            radAngerYes.isSelected(),
+            radNervousYes.isSelected(),
+            radDangerYes.isSelected(),
+             radHeartRateYes.isSelected(),
+             radHeavySweatingYes.isSelected();
+            checker.submit();
+           clearForm();
+            }
+    }
+         else if (e.getActionCommand().equals("Clear")) {
+        clearForm();
+    }
         else if (e.getActionCommand().equals("Exit")) {
-            System.exit(0);
+        System.exit(0);
+    }
+}
+
+        public static void main (String[]args){
+            new Symptoms().setGUI();
+            new JComboBox();
         }
     }
-
-    public static void main(String[] args) {
-        new Symptoms().setGUI();
-
-    }
-
-}
