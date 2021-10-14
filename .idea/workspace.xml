@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="51b914fe-a346-4318-aee4-dac492d636ab" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/mentalhealthapp/counselling/ModelClasses/Booking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/mentalhealthapp/symptoms/Symptoms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/mentalhealthapp/symptoms/Symptoms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/App.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/SignIn.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$15.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$16.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$DateLabelFormatter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/CounsellingGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/CounsellingGUI$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/SadagGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/SadagGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/SadagGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/ServicesGUI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/ServicesGUI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/TableGUI$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/TableGUI$3.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="counselling" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="ProjectId" id="1tUv5Ah6ONQXmpCMtxv4hBnVojf" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/za/ac/cput/mentalhealthapp" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lindokuhle Nini\OneDrive\Mental Health App\MentalHealthApp\images" />
+      <recent name="C:\Users\Lindokuhle Nini\OneDrive\Mental Health App\MentalHealthApp\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.SignIn">
+    <configuration name="CounsellingGUI (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.mentalhealthapp.counselling.GUIs.CounsellingGUI" />
+      <module name="MentalHealthApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.mentalhealthapp.counselling.GUIs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CounsellingGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.mentalhealthapp.counselling.CounsellingGUI" />
+      <module name="MentalHealthApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.mentalhealthapp.counselling.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicesGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.mentalhealthapp.counselling.GUIs.ServicesGUI" />
+      <module name="MentalHealthApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.mentalhealthapp.counselling.GUIs.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SignIn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.mentalhealthapp.auth.SignIn" />
+      <module name="MentalHealthApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.mentalhealthapp.auth.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="checker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="za.ac.cput.mentalhealthapp.symptoms.checker" />
+      <module name="MentalHealthApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="za.ac.cput.mentalhealthapp.symptoms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SignIn" />
+        <item itemvalue="Application.ServicesGUI" />
+        <item itemvalue="Application.CounsellingGUI (1)" />
+        <item itemvalue="Application.checker" />
+        <item itemvalue="Application.CounsellingGUI" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="51b914fe-a346-4318-aee4-dac492d636ab" name="Default Changelist" comment="" />
+      <created>1622836306616</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622836306616</updated>
+    </task>
+    <task id="LOCAL-00001" summary="first commit">
+      <created>1622836821545</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1622836821545</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit">
+      <created>1623063419239</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1623063419254</updated>
+    </task>
+    <task id="LOCAL-00003" summary="made changes to booking form">
+      <created>1629126740433</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1629126740433</updated>
+    </task>
+    <task id="LOCAL-00004" summary="commit">
+      <created>1629127483336</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1629127483336</updated>
+    </task>
+    <task id="LOCAL-00005" summary="symptoms checker GUI fixed">
+      <created>1633792942096</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1633792942096</updated>
+    </task>
+    <task id="LOCAL-00006" summary="symptoms checker GUI fixed">
+      <created>1633793043845</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1633793043845</updated>
+    </task>
+    <task id="LOCAL-00007" summary="symptoms checker GUI fixed">
+      <created>1633793923153</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1633793923153</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Merge branch 'counselling'&#10;&#10;# Conflicts:&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/DAO/BookingDAO.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/DAO/StudentDAO.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$1.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$2.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$3.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$4.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$5.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/CounsellingGUI$1.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/CounsellingGUI.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/TableGUI$1.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/TableGUI.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/ModelClasses/Booking.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/ModelClasses/Student.class&#10;#&#9;target/test-classes/za/ac/cput/mentalhealthapp/counselling/counsellingTest.class">
+      <created>1633877080287</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1633877080287</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Added more folders">
+      <created>1633878718930</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1633878718930</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="first commit" />
+    <MESSAGE value="made changes to booking form" />
+    <MESSAGE value="commit" />
+    <MESSAGE value="symptoms checker GUI fixed" />
+    <MESSAGE value="Merge branch 'counselling'&#10;&#10;# Conflicts:&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/DAO/BookingDAO.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/DAO/StudentDAO.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$1.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$2.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$3.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$4.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$5.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/CounsellingGUI$1.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/CounsellingGUI.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/TableGUI$1.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/TableGUI.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/ModelClasses/Booking.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/ModelClasses/Student.class&#10;#&#9;target/test-classes/za/ac/cput/mentalhealthapp/counselling/counsellingTest.class" />
+    <MESSAGE value="Added more folders" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added more folders" />
+  </component>
+</project>
