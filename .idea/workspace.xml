@@ -5,33 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51b914fe-a346-4318-aee4-dac492d636ab" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/mentalhealthapp/counselling/ModelClasses/Booking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/mentalhealthapp/auth/DAO/StudentDatabase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/mentalhealthapp/auth/GUIs/HomeScreen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/mentalhealthapp/auth/GUIs/SignUpPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/za/ac/cput/mentalhealthapp/symptoms/Symptoms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/za/ac/cput/mentalhealthapp/symptoms/Symptoms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/Util.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/SignIn.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$10.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$11.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$12.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$13.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$14.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$15.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$16.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$6.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$7.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$8.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$9.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$DateLabelFormatter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/CounsellingGUI$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/CounsellingGUI$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/SadagGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/SadagGUI$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/SadagGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/ServicesGUI$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/ServicesGUI.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/TableGUI$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/TableGUI$3.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633878718930</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Model classes">
+      <created>1633893960484</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1633893960484</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -246,6 +230,7 @@
     <MESSAGE value="symptoms checker GUI fixed" />
     <MESSAGE value="Merge branch 'counselling'&#10;&#10;# Conflicts:&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/DAO/BookingDAO.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/DAO/StudentDAO.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$1.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$2.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$3.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$4.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI$5.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/BookingGUI.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/CounsellingGUI$1.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/CounsellingGUI.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/TableGUI$1.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/GUIs/TableGUI.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/ModelClasses/Booking.class&#10;#&#9;target/classes/za/ac/cput/mentalhealthapp/counselling/ModelClasses/Student.class&#10;#&#9;target/test-classes/za/ac/cput/mentalhealthapp/counselling/counsellingTest.class" />
     <MESSAGE value="Added more folders" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more folders" />
+    <MESSAGE value="Model classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Model classes" />
   </component>
 </project>
