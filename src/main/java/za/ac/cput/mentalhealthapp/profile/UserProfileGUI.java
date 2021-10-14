@@ -1,11 +1,15 @@
 package za.ac.cput.mentalhealthapp.profile;
 
-import javax.swing.*;
+import za.ac.cput.mentalhealthapp.auth.SignIn;
+import za.ac.cput.mentalhealthapp.counselling.GUIs.CounsellingGUI;
 
-public class UserProfileGUI extends JFrame{
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class UserProfileGUI extends JFrame implements ActionListener {
 
     private JPanel mainPanel;
-    private JButton button1;
     private JLabel profilePic;
     private JButton logOutButton;
     private JButton aboutUsButton;
@@ -26,8 +30,37 @@ public class UserProfileGUI extends JFrame{
 
     }
 
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if (e.getActionCommand().equals("Log Out")) {
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
+
+            JFrame frame = new SignIn();
+            new SignIn().SignIn();
+
+            this.setVisible(false);
+
+        }
+/*
+        if (e.getActionCommand().equals("About Us")) {
+
+
+            JFrame frame = new
+
+            this.setVisible(false);
+
+        }
+        if (e.getActionCommand().equals("About Us")) {
+
+
+            JFrame frame = new SignIn();
+            new SignIn().SignIn();
+
+            this.setVisible(false);
+
+        }
+
+*/
+
     }
 }
